@@ -26,6 +26,16 @@ upper_case_full_names = []
 ```
 
 ### Answer
+[17] pry(main)> upper_case_full_names = []
+=> []
+[18] pry(main)> upper_case_full_names.push(students[0][:first_name]+" "+ students[0][:last_name])
+=> ["Ahmed Althagafi"]
+[19] pry(main)> upper_case_full_names.push(students[1][:first_name]+" "+ students[1][:last_name])
+=> ["Ahmed Althagafi", "Norah Alshehri"]
+[20] pry(main)> upper_case_full_names.push(students[2][:first_name]+" "+ students[2][:last_name])
+=> ["Ahmed Althagafi", "Norah Alshehri", "Haneen Alghamdi"]
+[21] pry(main)> upper_case_full_names.map(&:upcase)
+=> ["AHMED ALTHAGAFI", "NORAH ALSHEHRI", "HANEEN ALGHAMDI"]
 
 ```rb
 
@@ -81,7 +91,16 @@ first_order_for_each_user = []
 ```
 
 ### Answer
-
+[40] pry(main)> first_order_for_each_user = []
+=> []
+[41] pry(main)> first_order_for_each_user.push(users[0][:orders]) 
+=> [[{:description=>"a bike"}]]
+[42] pry(main)> first_order_for_each_user.push(users[1][:orders])
+=> [[{:description=>"a bike"}], [{:description=>"bees"}, {:description=>"fishing rod"}]]
+[43] pry(main)> first_order_for_each_user.push(users[2][:orders])
+=> [[{:description=>"a bike"}],
+ [{:description=>"bees"}, {:description=>"fishing rod"}],
+ [{:description=>"a MacBook"}, {:description=>"The West Wing DVDs"}, {:description=>"headphones"}, {:description=>"a kitten"}]]
 ```rb
 
 [ {description: "a bike"}, {description: "bees"}, {description: "a MacBook"} ]
